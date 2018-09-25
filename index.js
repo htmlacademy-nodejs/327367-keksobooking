@@ -24,5 +24,8 @@ switch (userCommand) {
     error = 1;
 }
 
-if (error) console.error(message, error);
-else console.log(message);
+if (error) {
+  console.error(message, error);
+} else {
+  console.log(message);
+}
