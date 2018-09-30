@@ -13,7 +13,7 @@ if (commandArray.length > 0) {
   commandArray[0].execute();
 } else {
   let message = `Неизвестная команда: ` + UserCommand + `.\n`;
-  packges.forEach(function (item, i, arr) {
+  packges.forEach(function (item) {
     message += item.name + ` — ` + item.description + `\n`;
   });
   console.error(message, 1);
