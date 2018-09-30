@@ -2,8 +2,8 @@
 const packageInfo = require(`../package.json`);
 
 module.exports = {
-  name: `version`,
-  description: `печатает версию приложения`,
+  name: `author`,
+  description: `печатает автора приложения`,
   execute() {
     console.log(`v${packageInfo.author}`);
   }

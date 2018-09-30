@@ -1,7 +1,10 @@
 'use strict';
 const packges = [
+  require(`./src/license.js`),
   require(`./src/version.js`),
+  require(`./src/description.js`),
   require(`./src/help.js`),
+  require(`./src/author.js`)
 ];
 
 let UserCommand = process.argv[2]; //  команда вводимая пользователем
