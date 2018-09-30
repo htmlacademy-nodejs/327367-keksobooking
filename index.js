@@ -1,26 +1,27 @@
-var error = false; //код ошибки
-var message = ''; //сообщение вывода
-var userCommand = process.argv[2]; //команда вводимая пользователем
-var projectName = 'Кексобукинг'; //название проекта
-var projectAuthor = 'Степанов Павел'; //автор проекта
+'use strict';
+let error = false; //  код ошибки
+let message = ``; // сообщение вывода
+let UserCommand = process.argv[2]; //  команда вводимая пользователем
+let ProjectName = `Кексобукинг`; //  название проекта
+let ProjectAuthor = `Степанов Павел`; //  автор проекта
 
-switch (userCommand) {
-  case '--version':
-    message = 'v0.0.1';
+switch (UserCommand) {
+  case `--version`:
+    message = `v0.0.1`;
     break;
-  case '--help':
-    message = 'Доступные команды:\n' +
-      '--help    — печатает этот текст;\n' +
-      '--version — печатает версию приложения;';
+  case `--help`:
+    message = `Доступные команды:\n` +
+      `--help    — печатает этот текст;\n` +
+      `--version — печатает версию приложения;`;
     break;
   case undefined:
-    message = 'Привет пользователь!\n' +
-      'Эта программа будет запускать сервер «' + projectName + '».\n' +
-      'Автор:' + projectAuthor + '.';
+    message = `Привет пользователь!\n` +
+      `Эта программа будет запускать сервер «` + ProjectName + `».\n` +
+      `Автор:` + ProjectAuthor + `.`;
     break;
   default:
-    message = 'Неизвестная команда {{ ' + userCommand + ' }}.\n' +
-      'Чтобы прочитать правила использования приложения, наберите "--help"';
+    message = `Неизвестная команда {{ ` + UserCommand + ` }}.\n` +
+      `Чтобы прочитать правила использования приложения, наберите "--help"`;
     error = 1;
 }
 
