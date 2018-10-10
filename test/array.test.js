@@ -11,11 +11,6 @@ const titles = [`Большая уютная квартира`,
   `Неуютное бунгало по колено в воде`
 ];
 const types = [`flat`, `palace`, `house`, `bungalo`];
-// const photos = [
-//   `http://o0.github.io/assets/images/tokyo/hotel1.jpg`,
-//   `http://o0.github.io/assets/images/tokyo/hotel2.jpg`,
-//   `http://o0.github.io/assets/images/tokyo/hotel3.jpg`
-// ];
 const checkinOut = [`12:00`, `13:00`, `14:00`];
 
 function find(array, value) {
