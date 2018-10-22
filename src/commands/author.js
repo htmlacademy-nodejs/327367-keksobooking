@@ -5,6 +5,6 @@ module.exports = {
   name: `--author`,
   description: `печатает автора приложения`,
   execute() {
-    console.log(`v${packageInfo.author}`);
+    console.log(`${packageInfo.author}`);
   }
 };

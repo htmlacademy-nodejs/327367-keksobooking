@@ -5,6 +5,6 @@ module.exports = {
   name: `--description`,
   description: `печатает описание приложения`,
   execute() {
-    console.log(`v${packageInfo.description}`);
+    console.log(`${packageInfo.description}`);
   }
 };

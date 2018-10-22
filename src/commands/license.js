@@ -5,6 +5,6 @@ module.exports = {
   name: `--license`,
   description: `печатает лицензию приложения`,
   execute() {
-    console.log(`v${packageInfo.license}`);
+    console.log(`${packageInfo.license}`);
   }
 };
