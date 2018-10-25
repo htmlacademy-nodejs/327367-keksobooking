@@ -53,13 +53,13 @@ const handler = (req, res) => {
 const server = http.createServer();
 
 const createServer = (param) => {
-  server.on(`request`,handler);
+  server.on(`request`, handler);
   server.listen(param, HOSTNAME, (err) => {
     if (err) {
       console.error(err);
       return;
     }
-    console.log(`Server running at http://${HOSTNAME}:${param}/`)
+    console.log(`Server running at http://${HOSTNAME}:${param}/`);
   });
 };
 
