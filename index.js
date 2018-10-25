@@ -1,24 +1,27 @@
 'use strict';
 
 const generate = require(`./src/generate.js`);
+// const server = require(`./src/server.js`);
 const packges = [
   require(`./src/commands/license.js`),
   require(`./src/commands/version.js`),
   require(`./src/commands/description.js`),
   require(`./src/commands/help.js`),
   require(`./src/commands/genentitycommand.js`),
-  require(`./src/commands/author.js`)
+  require(`./src/commands/author.js`),
+  require(`./src/server.js`)
 ];
 
-let UserCommand = process.argv[2]; //  команда вводимая пользователем
+const UserCommand = process.argv[2]; //  команда вводимая пользователем
+const params = process.argv.slice(3);
 
-let commandArray = packges.filter(function (item) {
+const commandArray = packges.filter(function (item) {
   return item.name === UserCommand;
 });
 
 if (commandArray.length > 0) {
-  commandArray[0].execute();
-  process.exit(1);
+  commandArray[0].execute(params);
+  // process.exit(1);
 } else {
   let message = ``;
   packges.forEach(function (item) {
